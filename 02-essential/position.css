@@ -1,0 +1,79 @@
+
+/* 부모 요소는 position: relative */
+.parent {
+    position: relative;
+    background-color: dodgerblue;
+    width: 600px;
+    height: 300px;
+}
+
+/* 자식 요소는 position: absolute */
+.child {
+    position: absolute;
+    background-color: crimson;
+    width: 200px;
+    height: 100px;
+
+    right: 0;
+    bottom: 0; /* left, right, top, bottom 속성은 position 속성이 있어야 한다. */
+}
+
+.parent2 {
+    position: relative;
+
+    width: 1200px;
+    height: 600px;
+}
+
+.parent2 div {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: skyblue;
+    text-align: center;
+}
+
+.one {
+    left: 0;
+    top: 0;
+}
+
+.two {
+    right: 0;
+    top: 0;
+}
+
+.three {
+    right: 0;
+    bottom: 0;
+}
+
+.four {
+    left: 0;
+    bottom: 0;
+}
+
+.five {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.six {
+    border: 1px solid black;
+    background-color: yellow;
+    left: 0;
+    top: 100%;
+}
+
+.seven {
+    border: 1px solid black;
+    top: 100%;
+    left: 100%;
+}
+
+.eight {
+    border: 1px solid black;
+    top: 0;
+    left: 100%;
+}

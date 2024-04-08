@@ -1,0 +1,74 @@
+<html lang="ko">
+<head>
+  <title></title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div class="container">
+    <a class="show-btn" href="">show</a>
+    <a class="hide-btn" href="">hide</a>
+    <a class="toggle-btn" href="">toggle</a>
+    <div class="box">Box</div>
+  </div>
+
+  <div class="navi">
+    <ul class="menu">
+      <li>
+        <a href="">MENU-1</a>
+        <div class="sub-menu">
+          <a href="">SUB-MENU-1</a>
+          <a href="">SUB-MENU-2</a>
+          <a href="">SUB-MENU-3</a>
+          <a href="">SUB-MENU-4</a>
+        </div>
+      </li>
+      <li>
+        <a href="">MENU-2</a>
+        <div class="sub-menu">
+          <a href="">SUB-MENU-1</a>
+          <a href="">SUB-MENU-2</a>
+          <a href="">SUB-MENU-3</a>
+          <a href="">SUB-MENU-4</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="btn">
+    <span>Notice</span>
+    <span>Gallery</span>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script>
+
+    $('.show-btn').click(function(event) {
+      event.preventDefault();
+      $('.box').slideDown();
+    })
+
+    $('.hide-btn').click(function (event) {
+      event.preventDefault();
+      $('.box').slideUp();
+    })
+
+    $('.toggle-btn').click(function(event) {
+      event.preventDefault();
+      $('.box').toggleClass('active')
+    })
+
+    $('.menu li').mouseenter(function(e) {
+      e.preventDefault();
+      $(this).children('.sub-menu').stop().slideDown()
+    }).mouseleave(function(e) {
+      e.preventDefault();
+      $(this).children('.sub-menu').stop().slideUp()
+    })
+
+    $('.btn span').click(function() {
+      $(this).addClass('active')
+      $(this).siblings('span').removeClass('active')
+    })
+  </script>
+</body>
+</html>

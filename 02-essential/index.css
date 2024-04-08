@@ -1,0 +1,56 @@
+h1 {
+    font-size: 50px;
+    color: red;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+
+}
+
+.menu li:before {
+    content: '@'
+}
+
+.parent {
+    border: 1px solid red;
+    width: 600px;
+    height: 200px;
+}
+
+.child {
+    border: 1px solid blue;
+    width: 200px;
+    height: 50px;
+}
+
+.box {
+    border: 1px solid red;
+    width: 400px;
+    height: 400px;
+    border-radius: 10%;
+}
+
+/* 자식 선택자 */
+.box > div {
+    border: 1px solid blue;
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+}
+
+/* 자손 선택자 (공백) */
+.box > div div {
+    width: 50px;
+    height: 50px;
+    background-color: #000;
+}
+
+.heading {
+    border: 1px solid red;
+    width: 600px;
+    height: 200px;
+    box-sizing: border-box; /* (중요) padding, margin, border 을 다 포함해도 width 600 이 되도록 함.*/
+    text-align: center;
+}
